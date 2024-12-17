@@ -8,6 +8,8 @@ The dataset used comes from https://www.kaggle.com/datasets/rowhitswami/nips-pap
 
 ## Overview
 
+This was a group effort as part of our SIM Data Analytics Club - Data Science Academy internal projects.
+
 The system uses **Langchain** for structured query generation, **RAG** (Retrieval-Augmented Generation) to retrieve relevant documents from the database, and **OpenAI's GPT** to generate responses based on SQL query results. The two notebooks must be run in order to set up and utilize the database and chatbot functionality.
 
 ---
