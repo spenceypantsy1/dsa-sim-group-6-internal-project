@@ -4,6 +4,8 @@ This project involves two main parts:
 1. **Database Creation and Word Clouds (with TF-IDF)**: The first notebook (`sql-data-exploration-database-creation.ipynb`) generates an SQLite database and creates word clouds.
 2. **RAG SQL Langchain Chatbot**: The second notebook (`rags-sql-langchain-chat-bot.ipynb`) leverages the database and Langchain to create an interactive chatbot for SQL-based queries.
 
+The dataset used comes from https://www.kaggle.com/datasets/rowhitswami/nips-papers-1987-2019-updated/data
+
 ## Overview
 
 The system uses **Langchain** for structured query generation, **RAG** (Retrieval-Augmented Generation) to retrieve relevant documents from the database, and **OpenAI's GPT** to generate responses based on SQL query results. The two notebooks must be run in order to set up and utilize the database and chatbot functionality.
