@@ -1,0 +1,11 @@
+python-dotenv==1.0.0
+matplotlib==3.7.1
+pandas==2.0.3
+langchain==0.0.162
+langchain-openai==0.0.12
+langchain-core==0.0.12
+langgraph==0.0.1
+langchain-community==0.0.1
+gradio==3.41.0
+IPython==8.15.0
+sqlite3==3.36.0  # You may already have this installed as part of Python
