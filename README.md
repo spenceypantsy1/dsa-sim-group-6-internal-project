@@ -1,8 +1,9 @@
 # SQL Data Exploration with Langchain and RAG 💬
 
-This project involves two main parts:
-1. **Database Creation and Word Clouds (with TF-IDF)**: The first notebook (`sql-data-exploration-database-creation.ipynb`) generates an SQLite database and creates word clouds.
-2. **RAG SQL Langchain Chatbot**: The second notebook (`rags-sql-langchain-chat-bot.ipynb`) leverages the database and Langchain to create an interactive chatbot for SQL-based queries.
+This project involves three main parts:
+1. **Database creation and EDA**: The first notebook(`eda-data-exploration.ipynb`) cleans the dataset and combines. both authors.csv & papers.csv into a single table. Exploratory Data Analysis is done here to understand the dataset better.
+2. **NLP hot topics generation**: The second notebook (`nlp-hot-topics-generation.ipynb`) creates word clouds and finds hot topics for each year with TF-IDF NLP to upload into the SQLite database.
+3. **RAG SQL Langchain Chatbot**: The third notebook (`rags-sql-langchain-chat-bot.ipynb`) leverages the database and Langchain to create an interactive chatbot for SQL-based queries.
 
 The dataset used comes from https://www.kaggle.com/datasets/rowhitswami/nips-papers-1987-2019-updated/data
 
@@ -36,24 +37,38 @@ OPENAI_API_KEY=your_openai_api_key
 
 # Steps
 
-### Step 1: Run the Database Creation Notebook
+### Step 1: Run the Database Creation ane EDA Notebook
 
-The first notebook, `sql-data-exploration-database-creation.ipynb`, generates the SQLite database (`main.db`) and creates word clouds for visual exploration.
+The first notebook, `eda-data-exploration.ipynb`, generates the SQLite database (`main.db`) and gives us an understanding on the intricacies of the data.
+
+**To run the database creation notebook:**
+
+1. Open Jupyter Notebook or JupyterLab 🖥️.
+2. Open the `eda-data-exploration.ipynb` notebook.
+3. Run the cells sequentially to:
+   - Create the SQLite database (`main.db`) 🗃️.
+   - Clean the data, removing NA fields and combining both data files into a single table.
+   - Plot the emerging trends in NIPS research papers.
+
+Once the notebook finishes, the `main.db` database and word clouds will be ready 🎉.
+
+---
+
+### Step 2: Run the Database Creation Notebook
+
+The second notebook, `sql-data-exploration-database-creation.ipynb`, engaging NLP techniques like TF-IDF to hot-topic trends and updates our SQLite database.
 
 **To run the database creation notebook:**
 
 1. Open Jupyter Notebook or JupyterLab 🖥️.
 2. Open the `sql-data-exploration-database-creation.ipynb` notebook.
 3. Run the cells sequentially to:
-   - Create the SQLite database (`main.db`) 🗃️.
    - Populate the database with your data (you can modify the notebook to customize the data source).
    - Generate word clouds based on the content of the database to visualize the data.
 
-Once the notebook finishes, the `main.db` database and word clouds will be ready 🎉.
-
 ---
 
-### Step 2: Run the RAG SQL Langchain Chatbot Notebook
+### Step 3: Run the RAG SQL Langchain Chatbot Notebook
 
 Once the database is created, the second notebook, `rags-sql-langchain-chat-bot.ipynb`, leverages Langchain to build a chatbot capable of interacting with the SQLite database using natural language queries 💬.
 
